@@ -1,0 +1,47 @@
+.ordersStepsContainer {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 1.8rem;
+}
+
+.ordersStepsContent {
+  display: flex;
+  padding: 1.5rem 0;
+  width: 70%;
+}
+
+.stepsTitle {
+  font-size: 2.2rem;
+  font-weight: bold;
+  line-height: 2rem;
+  
+  color: var(--red-800);
+
+  letter-spacing: -0.015em;
+  margin-right: 6.2rem;
+}
+
+.stepsItems {
+  list-style-type: none;
+}
+
+.stepsItems li {
+  font-size: 1rem;
+  font-weight: normal;
+
+  letter-spacing: -0.015em;
+  line-height: 1.5rem;
+}
+
+.stepsItems .stepsNumber {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-style: normal;
+  
+  margin-right: 0.6rem;
+  line-height: 2rem;
+  letter-spacing: -0.015em;
+
+  color: var(--red-800);
+}
