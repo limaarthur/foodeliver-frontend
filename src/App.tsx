@@ -1,9 +1,9 @@
-import { Home } from './components/Home'
+import { AppRoutes } from './routes'
 
 import './global.css'
 
 export function App() {
   return (
-    <Home />
+    <AppRoutes />
   )
 }
