@@ -1,5 +1,8 @@
 import { Footer } from '../Footer'
 import { Header } from '../Header'
+
+import { NavLink } from 'react-router'
+
 import styles from './Home.module.css'
 
 export function Home() {
@@ -16,9 +19,9 @@ export function Home() {
                   Escolha o seu pedido e em poucos minutos <br/>
                   levaremos na sua porta
                 </h3>
-                <a href="orders" className={styles.homeButtonOrder}>
+                <NavLink to="/orders" className={styles.homeButtonOrder}>
                   FAZER PEDIDO
-                </a>
+                </NavLink>
               </div>
               <div className="homeImage">
                 <img src="/images/main.svg" alt="Homem fazendo entrega de moto" />
