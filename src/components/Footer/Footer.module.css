@@ -1,0 +1,24 @@
+.mainFooter {
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  color: var(--red-800);
+
+  line-height: 1rem;
+
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: var(--white-500);
+  }
+  
+  .footerIcons {
+    display: flex;
+    justify-content: center;
+
+    padding: auto;
+    margin-top: 0.6rem;
+  }
+  
+  .footerIcons > * {
+    margin-right: 0.4rem;
+  }
