@@ -1,0 +1,13 @@
+.ordersListContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+.ordersListContent {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(auto-fill, 15.4rem);
+  grid-gap: 1.6rem 1rem;
+  width: 70%;
+}
