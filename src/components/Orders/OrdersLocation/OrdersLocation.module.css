@@ -1,0 +1,40 @@
+.orderLocationContainer {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.orderLocationContent {
+  width: 70%;
+  margin: 1.8rem 0 7.5rem 0;
+  padding: 1.2rem 0;
+  height: 31rem;
+  
+  background: var(--white-400);
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.orderLocationTitle {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: -0.015em;
+  color: var(--secondary-color);
+}
+
+.filterContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.filter {
+  width: 80%;
+}
+
+.mapContainer {
+   width: 100%;
+   height: 100%;
+}
