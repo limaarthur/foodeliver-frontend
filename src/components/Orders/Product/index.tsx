@@ -1,5 +1,7 @@
-import styles from './Product.module.css'
 import type { ProductType } from '../@types/types'
+import { priceFormatter } from '../../../utils/formatter'
+
+import styles from './Product.module.css'
 
 type ProductProps = {
   product: ProductType
@@ -17,7 +19,7 @@ export function Product({ product }: ProductProps) {
         alt={product.name} 
       />
       <h3 className={styles.productPrice}>
-        R$ {product.price}
+        {priceFormatter.format(product.price)}
       </h3>
       <div className={styles.producDescription}>
         <h3>Descrição</h3>
