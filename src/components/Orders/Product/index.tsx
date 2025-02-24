@@ -1,23 +1,28 @@
 import styles from './Product.module.css'
+import type { ProductType } from '../@types/types'
 
-export function Product() {
+type ProductProps = {
+  product: ProductType
+}
+
+export function Product({ product }: ProductProps) {
   return (
     <div className={styles.productContainer}>
       <h3 className={styles.productTitle}>
-        Pizza calabresa
+        {product.name}
       </h3>
       <img 
         className={styles.productImage}
-        src="/images/pizza.svg" 
-        alt="Imagem de uma pizza" 
+        src={product.imageUri}
+        alt={product.name} 
       />
       <h3 className={styles.productPrice}>
-        R$ 35,90
+        R$ {product.price}
       </h3>
       <div className={styles.producDescription}>
         <h3>Descrição</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam eum facilis accusamus similique molestiae distinctio, ea cupiditate obcaecati quidem!
+          {product.description}
         </p>
       </div>
     </div>

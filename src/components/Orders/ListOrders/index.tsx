@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import { Header } from "../../Header";
 import { StepsHeader } from "../StepsHeader";
 import { ProductList } from "../ProductList";
-import type { Product } from "../@types/types";
+import type { ProductType } from "../@types/types";
 import { fetchProducts } from "../../../api";
 
 export function ListOrders() {
-  const [products, setProducts] = useState<Product[]>([])
+  const [products, setProducts] = useState<ProductType[]>([])
   console.log(products)
 
   useEffect(() => {
@@ -19,7 +19,7 @@ export function ListOrders() {
     <div>
       <Header />
       <StepsHeader />
-      <ProductList />
+      <ProductList products={products} />
     </div>
   )
 }
