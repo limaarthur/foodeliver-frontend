@@ -1,13 +1,13 @@
 import { useState } from 'react';
-
+import type { OrderLocationdata } from '../@types/types';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 
 import AsyncSelect from 'react-select/async';
+import type { GroupBase, OptionsOrGroups } from 'react-select';
 
 import { fetchLocalMapTiler } from '../../../api';
 
 import styles from './OrdersLocation.module.css'
-import type { OrderLocationdata } from '../@types/types';
 
 const initialPosition = {
   lat: -7.2347669,
@@ -32,7 +32,9 @@ export function OrdersLocation({ onChangeLocation }: Props ) {
     position: initialPosition
   })
 
-  const loadOptions = async (inputValue: string, callback: (places: Place[]) => void) => {
+  const loadOptions = async (inputValue: string, callback: (places: OptionsOrGroups<Place, GroupBase<Place>>) => void
+  ): Promise<OptionsOrGroups<Place, GroupBase<Place>>> => {
+    
     const response = await fetchLocalMapTiler(inputValue);
   
     const places = response.data.features.map((item: any) => {
@@ -47,6 +49,8 @@ export function OrdersLocation({ onChangeLocation }: Props ) {
     });
   
     callback(places);
+
+    return places as OptionsOrGroups<Place, GroupBase<Place>>;
   };
   
   const handleChangeSelect = (place: Place) => {
