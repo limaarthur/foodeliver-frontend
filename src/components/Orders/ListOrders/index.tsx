@@ -5,6 +5,8 @@ import { ProductList } from "../ProductList";
 import type { OrderLocationdata, ProductType } from "../@types/types";
 import { fetchProducts } from "../../../api";
 import { OrdersLocation } from "../OrdersLocation";
+import { OrderSummary } from "../OrderSummary";
+import { Footer } from "../../Footer";
 
 export function ListOrders() {
   const [products, setProducts] = useState<ProductType[]>([])
@@ -17,11 +19,15 @@ export function ListOrders() {
   }, []);
 
   return (
-    <div>
-      <Header />
-      <StepsHeader />
-      <ProductList products={products} />
-      <OrdersLocation onChangeLocation={location => setOrderLocation(location)} />
-    </div>
+    <>
+      <div>
+        <Header />
+        <StepsHeader />
+        <ProductList products={products} />
+        <OrdersLocation onChangeLocation={location => setOrderLocation(location)} />
+        <OrderSummary />
+      </div>
+      <Footer />
+    </>
   )
 }

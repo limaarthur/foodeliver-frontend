@@ -1,0 +1,72 @@
+.orderSummaryContainer {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0 1rem 0;
+}
+
+.orderSummaryContent {
+  display: flex;
+  justify-content: space-between;
+
+  width: 70%;
+  padding: 1.2rem;
+
+  background: var(--red-800);
+  color: var(--white);
+
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.amountSelectedContainer{
+  display: block;
+  font-size: 0.6rem;
+
+  font-weight: normal;
+
+  line-height: 1rem;
+  letter-spacing: -0.015em;
+
+  margin-bottom: 0.6rem;
+}
+
+.orderSummaryTotal{
+  display: block;
+
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1rem;
+  letter-spacing: -0.015em;
+
+  color: var(--white);
+}
+
+.amountSelected {
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1rem;
+  letter-spacing: -0.015em;
+
+  margin-right: 0.4rem;
+}
+
+.orderSummaryMakeOrder{
+  font-weight: bold;
+  font-size: 1.2rem;
+
+  text-align: center;
+
+  width: 12rem;
+  height: 3rem;
+
+  border-radius: 0.6rem;
+  line-height: 1.5rem;
+
+  color: var(--red-800);
+  background: var(--white);
+
+  letter-spacing: -0.015em;
+
+  border: 0;
+  cursor: pointer;
+}
