@@ -27,7 +27,7 @@
   letter-spacing: -0.015em;
 }
 
-.order-card-container.selected .order-card-title {
+.productContainer.selected .productTitle {
   color: var(--green-500);
 }
 
@@ -46,6 +46,10 @@
   letter-spacing: -0.015em;
   color: var(--red-800);
  }
+
+.productContainer.selected  .productPrice {
+  color: var(--green-500);
+}
 
 .producDescription {
   border-top: 1px solid var(--white-500);

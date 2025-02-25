@@ -5,11 +5,16 @@ import styles from './Product.module.css'
 
 type ProductProps = {
   product: ProductType
+  onSelectProduct: (product: ProductType) => void
+  isSelected: boolean
 }
 
-export function Product({ product }: ProductProps) {
+export function Product({ product, onSelectProduct, isSelected }: ProductProps) {
   return (
-    <div className={styles.productContainer}>
+    <div 
+      className={`${styles.productContainer} ${isSelected ? styles.selected : ''}`}
+      onClick={() => onSelectProduct(product)}
+    >
       <h3 className={styles.productTitle}>
         {product.name}
       </h3>
