@@ -7,6 +7,7 @@ import AsyncSelect from 'react-select/async';
 import { fetchLocalMapTiler } from '../../../api';
 
 import styles from './OrdersLocation.module.css'
+import type { OrderLocationdata } from '../@types/types';
 
 const initialPosition = {
   lat: -7.2347669,
@@ -22,7 +23,11 @@ type Place = {
   }
 }
 
-export function OrdersLocation() {
+type Props = {
+  onChangeLocation: (location: OrderLocationdata) => void;
+}
+
+export function OrdersLocation({ onChangeLocation }: Props ) {
   const [address, setAddress] = useState<Place>({
     position: initialPosition
   })
@@ -46,11 +51,11 @@ export function OrdersLocation() {
   
   const handleChangeSelect = (place: Place) => {
     setAddress(place);
-    //onChangeLocation({
-      //latitude: place.position.lat,
-      //longitude: place.position.lng,
-      //address: place.label!
-    //});
+    onChangeLocation({
+      latitude: place.position.lat,
+      longitude: place.position.lng,
+      address: place.label!
+    });
   };
 
   return (
